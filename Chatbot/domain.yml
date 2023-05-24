@@ -1,0 +1,47 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - feelings_express
+  - task_query
+
+responses:
+  utter_greet:
+  - text: "السلام عليكم ,كيف حالك؟"
+
+  utter_cheer_up:
+  - text: "انظر لهذه الصورة الجميلة!"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "هل شعرت بتحسّن؟"
+
+  utter_happy:
+  - text: "ممتاز, استمر بالتفائل وحاول الابتعاد عن مصادر التوتر"
+
+  utter_goodbye:
+  - text: "الى اللقاء"
+
+  utter_iamabot:
+  - text: "أنا مجيب آلي, ولست كائن بشري. ولن اقضي  على مهنتك! هههه"
+  
+  utter_task_query:
+  - text: "سوف اجلب لك المعلومات من حسابك على تريللو"
+
+  # utter_feelings_express:
+  # - text: " يمكنك ان تحدثني عن مشاعرك لكن لايمكنني مساعدتك كثيرا, للاسف انا اعتذر. قد تفيدك هذه الصورة :) مارأيك؟"
+  #   image: " https://img.freepik.com/free-photo/face-expressions-illustrations-emotions-feelings_53876-121263.jpg?w=2000 "
+
+
+actions:
+- action_sentiment_analysis
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
